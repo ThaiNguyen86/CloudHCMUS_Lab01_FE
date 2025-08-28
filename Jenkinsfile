@@ -1,6 +1,6 @@
 pipeline {
     agent any
-	DOCKER_IMAGE = "ngtthai/lab01
+	DOCKER_IMAGE = "ngtthai/lab01"
 	DOCKER_CREDENTIAL = credentials('dockerhub-credential')
     stages {
         stage('Git Stage') {
