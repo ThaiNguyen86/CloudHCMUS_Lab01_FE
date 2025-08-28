@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    environment{
+    environment {
 	DOCKER_IMAGE = "ngtthai/lab01"
 	DOCKER_CREDENTIAL = credentials('dockerhub-credential')
     }
@@ -18,7 +18,7 @@ pipeline {
                     docker.build("${DOCKER_IMAGE}:${env.BUILD_NUMBER}")
                 }
             }
-        }
+        },
         stage('Push Image') {
             steps {
                 script {
